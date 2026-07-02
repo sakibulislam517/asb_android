@@ -3,6 +3,7 @@
 build/
 */build/
 !gradle/wrapper/gradle-wrapper.jar
+wrapper/dists/
 
 # IDE - IntelliJ / Android Studio
 *.iml
