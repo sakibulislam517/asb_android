@@ -1,0 +1,17 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/splash_background_center</item>
+        <item name="colorPrimaryDark">@color/splash_background_end</item>
+        <item name="colorAccent">@color/splash_background_start</item>
+    </style>
+
+    <!-- Splash Screen theme -->
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/splash_gradient_background</item>
+        <item name="android:statusBarColor">@color/splash_background_end</item>
+        <item name="android:navigationBarColor">@color/splash_background_end</item>
+    </style>
+</resources>

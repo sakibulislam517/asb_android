@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Header with Wave Background - Increased Height -->
+    <View
+        android:id="@+id/header_background"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:background="@drawable/header_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Profile Section - Enlarged Card -->
+    <ImageView
+        android:id="@+id/company_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginTop="36dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/asblogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="24dp"
+        app:cardBackgroundColor="#3ab679"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <!-- Profile Image - Larger Size -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_image_container"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/def_user" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Profile Text - Larger Font -->
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/profile_image_container"
+                app:layout_constraintTop_toTopOf="@+id/profile_image_container" />
+
+            <TextView
+                android:id="@+id/profile_designation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/profile_image_container"
+                app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+
+
+
+
+            <!-- Improved Progress Bar -->
+            <SeekBar
+                android:id="@+id/progress_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:minHeight="20dp"
+                android:progress="40"
+                android:progressDrawable="@drawable/progress_background"
+                android:thumb="@drawable/progress_thumb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image_container" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Categories Grid - Larger Elements with Better Spacing -->
+    <GridLayout
+        android:id="@+id/categories_grid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_card">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#3ab679"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Dashboard"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Enhanced Category Cards -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/create_sales"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#3ab679"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/sales" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Create Sales"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/collection"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#3ab679"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/col" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Collection"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sales_report"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#3ab679"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/report" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Sales Report"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,54 @@
+# Gradle
+.gradle/
+build/
+*/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE - IntelliJ / Android Studio
+*.iml
+.idea/
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Local config
+local.properties
+*.keystore
+*.jks
+debug.keystore
+
+# NDK / CMake
+.externalNativeBuild/
+.cxx/
+
+# Android
+android.lock
+android/
+captures/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Temp
+.tmp/
+*.log
+*.tmp
+
+# Node (cmdc / commandcode)
+node_modules/
+.commandcode/
+
+# Bundled SDK / JDK
+jdks/

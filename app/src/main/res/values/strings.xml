@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ASB ERP</string>
+    <string name="background_image">Background Image</string>
+    <string name="company_name_short">ASB</string>
+    <string name="company_name_full">Accounting Solution Bangladesh</string>
+    <string name="tagline">Professional Accounting Solutions</string>
+    <string name="copyright_text">© 2025 ASB. All Rights Reserved.</string>
+    <string name="app_logo">Company Logo</string>
+</resources>
